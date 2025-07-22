@@ -1,0 +1,37 @@
+.-pc {
+    @include breakpoint-down('tablet') {
+        display: none !important;
+    }
+}
+
+.-pc-pad {
+    @include breakpoint-down('mobile') {
+        display: none;
+    }
+}
+
+.-pad {
+    @include breakpoint-up('laptop') {
+        display: none;
+    }
+
+    @include breakpoint-down('mobile') {
+        display: none;
+    }
+}
+
+.-mb-pad {
+    @include breakpoint-up('laptop') {
+        display: none;
+    }
+}
+
+.-mb {
+    @include breakpoint-up('tablet') {
+        display: none;
+    }
+}
+
+.-hidden {
+    display: none !important;
+}

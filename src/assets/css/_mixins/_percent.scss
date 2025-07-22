@@ -1,0 +1,15 @@
+@function percent($item, $wrap) {
+    @return calc($item / $wrap) * 100%;
+}
+
+@function em($item, $wrap) {
+    @return calc($item / $wrap) * 1em;
+}
+
+@function vwPc($item, $wrap: 1920) {
+    @return calc($item / $wrap) * 100vw;
+}
+
+@function vwMb($item, $wrap: 375) {
+    @return calc($item / $wrap) * 100vw;
+}

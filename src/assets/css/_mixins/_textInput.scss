@@ -1,0 +1,41 @@
+@mixin text-input() {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 0;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+    }
+
+    //去除ie input 預設
+    &::-ms-clear {
+        display: none;
+    }
+
+    &::-ms-reveal {
+        display: none;
+    }
+
+    //去除edge預設
+    &::-o-clear {
+        display: none;
+    }
+
+    //去除firefox input 預設
+    &[type='number'] {
+        -moz-appearance: textfield;
+    }
+
+    &:invalid {
+        box-shadow: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
