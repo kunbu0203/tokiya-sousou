@@ -39,6 +39,46 @@
 <body>
     <div class="container">
         <header class="header">
+            <div class="header-wrap">
+                <a href="#" class="header-logo" target="_blank" rel="noopener noreferrer">
+                    <img src="{{ '/assets/image/header/logo.png' | relativePath }}" alt="">
+                </a>
+                <button class="header-burger" data-burger></button>
+                <div class="header-pcNav">
+                    <button class="header-item">
+                        <img src="{{ '/assets/image/header/product.png' | relativePath }}" alt="公益商品">
+                    </button>
+                    <button class="header-item">
+                        <img src="{{ '/assets/image/header/story.png' | relativePath }}" alt="英雄故事集">
+                    </button>
+                    <button class="header-item">
+                        <img src="{{ '/assets/image/header/qa.png' | relativePath }}" alt="活動Q&A">
+                    </button>
+                    <a href="#" class="header-item" target="_blank" rel="noopener noreferrer">
+                        <img src="{{ '/assets/image/header/facebook.svg' | relativePath }}" alt="facebook">
+                    </a>
+                </div>
+                <div class="header-mbNav">
+                    <div>
+                        <button class="header-cross" data-burger></button>
+                        <button class="header-item">
+                            <img src="{{ '/assets/image/header/product-m.svg' | relativePath }}" alt="公益商品">
+                        </button>
+                        <button class="header-item">
+                            <img src="{{ '/assets/image/header/buy-m.svg' | relativePath }}" alt="購買「2025知書答禮」">
+                        </button>
+                        <button class="header-item">
+                            <img src="{{ '/assets/image/header/story-m.svg' | relativePath }}" alt="英雄故事集">
+                        </button>
+                        <button class="header-item">
+                            <img src="{{ '/assets/image/header/qa-m.svg' | relativePath }}" alt="活動Q&A">
+                        </button>
+                        <a href="#" class="header-item" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ '/assets/image/header/facebook-m.svg' | relativePath }}" alt="facebook">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </header>
         <main class="main">
             {% block content %}{% endblock %}

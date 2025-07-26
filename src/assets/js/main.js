@@ -12,4 +12,9 @@
         var vh = window.innerHeight * 0.01;
         $('html').css('--vh', vh + 'px');
     }).trigger('resize.vh');
+
+    // 選單
+    $('[data-burger]').on('click.burger', function () {
+        $('body').toggleClass('-menuOpen');
+    });
 })();

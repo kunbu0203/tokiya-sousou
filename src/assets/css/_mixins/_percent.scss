@@ -13,3 +13,7 @@
 @function vwMb($item, $wrap: 375) {
     @return calc($item / $wrap) * 100vw;
 }
+
+@function mb($item) {
+    @return calc($item / 3) * 1px;
+}
