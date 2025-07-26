@@ -28,6 +28,12 @@
         }, 400)
     });
     $(window).trigger('scroll.goTop');
+
+    // 收合
+    $('[data-collapse-action]').on('click', function (e) {
+        e.preventDefault();
+        $(this).closest('[data-collapse]').toggleClass('is-open').find('[data-collapse-content]').slideToggle();
+    });
 })();
 
 (function boy() {

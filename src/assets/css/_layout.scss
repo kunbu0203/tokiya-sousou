@@ -183,6 +183,7 @@ body {
     padding: 24px 0;
     font-size: 0;
     text-align: center;
+    background-color: #faf6f1;
 
     img {
         width: 270px;
@@ -225,13 +226,13 @@ body {
         pointer-events: none;
     }
 
-    @include breakpoint-down('laptop') {
-        right: 10px;
-        width: 130px;
+    @media only screen and (max-width: 1440px) {
+        right: 4px;
+        width: 100px;
 
         &-txt {
-            width: 38px;
-            margin: 0 24px 8px 0;
+            width: 28px;
+            margin: 0 20px 6px 0;
         }
     }
 

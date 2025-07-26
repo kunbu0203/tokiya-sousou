@@ -1,1 +1,214 @@
-.wrap {}
+.qa {
+    padding: 322px 20px 110px;
+    background: #faf6f1 url(./../image/qa/mountain.png) repeat-x top center/1920px;
+
+    &-wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &-tit {
+        margin-bottom: 36px;
+        text-align: center;
+
+        img {
+            width: 263px;
+        }
+    }
+
+    &-content {
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 42px;
+            height: 14px;
+            margin: 0 auto;
+            background: url(./../image/qa/cube.png) no-repeat center/contain;
+        }
+
+        &::before {
+            margin-bottom: 18px;
+        }
+
+        &::after {
+            margin-top: 18px;
+        }
+    }
+
+    &-list {
+        display: flex;
+        align-items: flex-start;
+        gap: 110px;
+    }
+
+    &-group {
+        flex: 1;
+        border-top: 1px solid #9c6cb0;
+    }
+
+    &-item {
+        position: relative;
+        font-size: 20px;
+        color: #9c6cb0;
+        border-bottom: 1px solid #9c6cb0;
+    }
+
+    &-num {
+        position: absolute;
+        top: 18px;
+        left: 18px;
+        pointer-events: none;
+    }
+
+    &-head {
+        width: 100%;
+        padding: 18px 60px;
+        color: #9c6cb0;
+        text-align: left;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 24px;
+            right: 30px;
+            width: 20px;
+            height: 20px;
+            background: url(./../image/qa/arrow.svg) no-repeat center/contain;
+            transition: transform .3s;
+        }
+    }
+
+    &-txt {
+        display: none;
+        padding: 0 72px 20px 60px;
+        font-size: 16px;
+        color: #000;
+    }
+
+    &-item.-twoDigit & {
+
+        &-head,
+        &-txt {
+            padding-left: 72px;
+        }
+    }
+
+    &-item.is-open & {
+
+        &-head {
+            &::after {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    @include breakpoint-down('laptop') {
+        padding: 258px 20px 88px;
+        background-size: 1536px;
+
+        &-tit {
+            margin-bottom: 28px;
+
+            img {
+                width: 210px;
+            }
+        }
+
+        &-content {
+
+            &::before,
+            &::after {
+                width: 34px;
+                height: 12px;
+            }
+        }
+
+        &-list {
+            gap: 80px;
+        }
+
+        &-item {
+            font-size: 17px;
+        }
+
+        &-num {
+            top: 14px;
+            left: mb(15);
+        }
+
+        &-head {
+            padding: 14px mb(108);
+
+            &::after {
+                top: 20px;
+                right: 12px;
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        &-txt {
+            padding: 0 mb(108) 17px mb(108);
+            font-size: 15px;
+        }
+
+        &-item.-twoDigit & {
+
+            &-head,
+            &-txt {
+                padding-left: mb(138);
+            }
+        }
+    }
+
+    @include breakpoint-down('tablet') {
+        padding: mb(348) 20px mb(210);
+        background-size: mb(1160);
+        background-image: url(./../image/qa/mountain-m.png);
+
+        &-tit {
+            margin-bottom: mb(33);
+
+            img {
+                width: mb(343);
+            }
+        }
+
+        &-content {
+
+            &::before,
+            &::after {
+                width: mb(56);
+                height: mb(19);
+            }
+
+            &::before {
+                margin-bottom: mb(24);
+            }
+
+            &::after {
+                margin-top: mb(24);
+            }
+        }
+
+        &-list {
+            display: block;
+            gap: 0;
+            border-top: 1px solid #9c6cb0;
+        }
+
+        &-group {
+            border: none;
+        }
+
+        &-item {
+            font-size: 15px;
+        }
+
+        &-txt {
+            font-size: 14px;
+        }
+    }
+}
