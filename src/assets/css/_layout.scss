@@ -202,12 +202,46 @@ body {
 }
 
 /* ------------------------------- Floating tool ------------------------------- */
-.gotop {
+.goTop {
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 40px;
+    right: 20px;
+    display: none;
+    width: 190px;
+    text-align: right;
     overflow: hidden;
     z-index: 50;
 
-    @include breakpoint-down('mobile') {}
+    &-txt {
+        width: 47px;
+        margin: 0 46px 12px 0;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-boy {
+        pointer-events: none;
+    }
+
+    @include breakpoint-down('laptop') {
+        right: 10px;
+        width: 130px;
+
+        &-txt {
+            width: 38px;
+            margin: 0 24px 8px 0;
+        }
+    }
+
+    @include breakpoint-down('tablet') {
+        right: 2px;
+        width: mb(130);
+
+        &-txt {
+            width: mb(60);
+            margin: 0 mb(24) mb(9) 0;
+        }
+    }
 }

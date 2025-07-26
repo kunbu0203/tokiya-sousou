@@ -18,6 +18,16 @@
         $('body').toggleClass('-menuOpen');
     });
 
+    // goTop
+    $(window).on('scroll.goTop', function () {
+        $(window).scrollTop() > 30 ? $('.goTop').fadeIn(300) : $('.goTop').fadeOut(300);
+    });
+    $('[data-top]').on('click.goTop', function () {
+        $('body, html').animate({
+            scrollTop: 0
+        }, 400)
+    });
+    $(window).trigger('scroll.goTop');
 })();
 
 (function boy() {
