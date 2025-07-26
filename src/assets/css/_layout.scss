@@ -166,10 +166,40 @@ body {
 }
 
 /* ------------------------------- Main ------------------------------- */
-.main {}
+.main {
+    padding-top: 100px;
+
+    @include breakpoint-down('laptop') {
+        padding-top: 80px;
+    }
+
+    @include breakpoint-down('tablet') {
+        padding-top: mb(150);
+    }
+}
 
 /* ------------------------------- Footer ------------------------------- */
-.footer {}
+.footer {
+    padding: 24px 0;
+    font-size: 0;
+    text-align: center;
+
+    img {
+        width: 270px;
+    }
+
+    @include breakpoint-down('laptop') {
+        padding: 20px 0;
+
+        img {
+            width: 240px;
+        }
+    }
+
+    @include breakpoint-down('tablet') {
+        padding: mb(24) 0;
+    }
+}
 
 /* ------------------------------- Floating tool ------------------------------- */
 .gotop {
