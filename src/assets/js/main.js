@@ -17,4 +17,34 @@
     $('[data-burger]').on('click.burger', function () {
         $('body').toggleClass('-menuOpen');
     });
+
+})();
+
+(function boy() {
+    const duration = 400;
+
+    $('.boy').each(function () {
+        const $boy = $(this);
+        const $images = $boy.find('img');
+        let index = 0;
+        let direction = 1; // 1 = forward, -1 = backward
+
+        function showImage(i) {
+            $images.removeClass('-active').eq(i).addClass('-active');
+        }
+
+        function cycle() {
+            showImage(index);
+
+            index += direction;
+
+            if (index === $images.length - 1 || index === 0) {
+                direction *= -1; // 到頭或到尾時改變方向
+            }
+
+            setTimeout(cycle, duration);
+        }
+
+        cycle();
+    });
 })();
