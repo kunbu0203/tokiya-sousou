@@ -27,6 +27,7 @@
     <link rel="apple-touch-icon" href="{{ '/assets/image/touch/logo.png' | relativePath }}">
 
     {% block pluginsStyles %}{% endblock %}
+    <link rel="stylesheet" href="{{ '/assets/lib/overlayScrollbars/OverlayScrollbars.min.css' | relativePath }}">
     <link rel="stylesheet" href="{{ '/assets/css/normalize.min.css' | relativePath }}">
     <link rel="stylesheet" href="{{ '/assets/css/main.min.css' | relativePath }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,6 +103,7 @@
     </div>
     {% block popups %}{% endblock %}
     <script src="{{ '/assets/lib/jquery-3.7.1.min.js' | relativePath }}"></script>
+    <script src="{{ '/assets/lib/overlayScrollbars/jquery.overlayScrollbars.min.js' | relativePath }}"></script>
     {% block pluginScripts %}{% endblock %}
     <script src="{{ '/assets/js/main.min.js' | relativePath }}"></script>
     {% block scripts %}{% endblock %}

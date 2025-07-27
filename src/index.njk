@@ -1,11 +1,147 @@
 {% extends './_layouts/_layout.tmpl' %}
 
 {% block content %}
-{# <div class="boy">
+<div class="boy">
     <img src="./assets/image/boy/top.png" alt="">
     <img src="./assets/image/boy/middle.png" alt="">
     <img src="./assets/image/boy/bottom.png" alt="">
-</div> #}
+</div>
+<section class="story">
+    <div class="story-bg">
+        <img class="-pc-pad" src="./assets/image/story/bg.png" alt="">
+        <img class="-mb" src="./assets/image/story/bg-m.png" alt="">
+    </div>
+    <div class="story-wrap">
+        <div class="story-tit">
+            <img src="./assets/image/story/tit.png" alt="">
+        </div>
+        <div class="story-desc">
+            TFT以孩子為核心，走入教學現場，向學校、社區、社會擴散<br class="-pc-pad">
+            6篇完整記錄在台灣各地一起努力的真實故事，期許未來能讓改變發芽
+        </div>
+        <div class="story-tab">
+            <div class="tab">
+                <div class="tab-nav swiper" data-slide="tab">
+                    <div class="swiper-wrapper">
+                        {%- for i in range(0, 6) %}
+                        <div class="swiper-slide">
+                            <div class="tab-btn{{ ' -active' if loop.first }}" data-tab-btn="{{loop.index}}">
+                                <div class="tab-name">
+                                    <img src="./assets/image/story/txt-{{loop.index}}.png" alt="">
+                                </div>
+                                <div class="tab-icon">
+                                    <img src="./assets/image/story/icon-{{loop.index}}.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        {%- endfor %}
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="tab-panel -active" data-tab-content="1">
+                    <div class="story-item">
+                        <div class="story-pic">
+                            <img class="-pc-pad" src="./assets/image/story/pic-1.jpg" alt="">
+                            <img class="-mb" src="./assets/image/story/pic-1-m.jpg" alt="">
+                        </div>
+                        <div class="story-content">
+                            <div data-scrollbar>
+                                <p>從職業採訪中，看見孩子眼中放出的光</p>
+                                小琪下課時常靜靜地待在座位上,學習資質不錯的她,總是被動的學習和產出師長期待的回
+                                答,唯有在談起她最愛的動漫時,她的眼中總會閃現光亮。<br>
+                                <br>
+                                為了讓孩子們探索職涯的可能性,家賢老師決定帶孩子進行職業採訪,孩子們列出的清單五
+                                花八門,從常見的律師、工程師,到少有人知的空中瑜珈教練等,而小琪選擇了一位專業的
+                                Coser,在過程中,她展現了少見的好奇與熱情,回到校園後,曾經沉默的小琪也自信地分
+                                享著採訪中的點滴,眼中充滿了熱情。<br>
+                                <br>
+                                期待透過這次經驗,這種對未來的探索熱情與挑戰精神,能持續引領著孩子們一步步找到人
+                                生的理想。<br>
+                                小琪下課時常靜靜地待在座位上,學習資質不錯的她,總是被動的學習和產出師長期待的回
+                                答,唯有在談起她最愛的動漫時,她的眼中總會閃現光亮。<br>
+                                <br>
+                                為了讓孩子們探索職涯的可能性,家賢老師決定帶孩子進行職業採訪,孩子們列出的清單五
+                                花八門,從常見的律師、工程師,到少有人知的空中瑜珈教練等,而小琪選擇了一位專業的
+                                Coser,在過程中,她展現了少見的好奇與熱情,回到校園後,曾經沉默的小琪也自信地分
+                                享著採訪中的點滴,眼中充滿了熱情。<br>
+                                <br>
+                                期待透過這次經驗,這種對未來的探索熱情與挑戰精神,能持續引領著孩子們一步步找到人
+                                生的理想。<br>
+                                <br>
+                                <br>
+                                花蓮富里鄉,第十届TFT計畫成員林家賢
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-panel" data-tab-content="2">
+                    <div class="story-item">
+                        <div class="story-pic">
+                            <img class="-pc-pad" src="./assets/image/story/pic-1.jpg" alt="">
+                            <img class="-mb" src="./assets/image/story/pic-1-m.jpg" alt="">
+                        </div>
+                        <div class="story-content">
+                            <div data-scrollbar>
+                                <p>從職業採訪中，看見孩子眼中放出的光</p>
+                                小琪下課時常靜靜地待在座位上,學習資質不錯的她,總是被動的學習和產出師長期待的回
+                                答,唯有在談起她最愛的動漫時,她的眼中總會閃現光亮。<br>
+                                <br>
+                                為了讓孩子們探索職涯的可能性,家賢老師決定帶孩子進行職業採訪,孩子們列出的清單五
+                                花八門,從常見的律師、工程師,到少有人知的空中瑜珈教練等,而小琪選擇了一位專業的
+                                Coser,在過程中,她展現了少見的好奇與熱情,回到校園後,曾經沉默的小琪也自信地分
+                                享著採訪中的點滴,眼中充滿了熱情。<br>
+                                <br>
+                                期待透過這次經驗,這種對未來的探索熱情與挑戰精神,能持續引領著孩子們一步步找到人
+                                生的理想。<br>
+                                小琪下課時常靜靜地待在座位上,學習資質不錯的她,總是被動的學習和產出師長期待的回
+                                答,唯有在談起她最愛的動漫時,她的眼中總會閃現光亮。<br>
+                                <br>
+                                為了讓孩子們探索職涯的可能性,家賢老師決定帶孩子進行職業採訪,孩子們列出的清單五
+                                花八門,從常見的律師、工程師,到少有人知的空中瑜珈教練等,而小琪選擇了一位專業的
+                                Coser,在過程中,她展現了少見的好奇與熱情,回到校園後,曾經沉默的小琪也自信地分
+                                享著採訪中的點滴,眼中充滿了熱情。<br>
+                                <br>
+                                期待透過這次經驗,這種對未來的探索熱情與挑戰精神,能持續引領著孩子們一步步找到人
+                                生的理想。<br>
+                                <br>
+                                <br>
+                                花蓮富里鄉,第十届TFT計畫成員林家賢
+                                小琪下課時常靜靜地待在座位上,學習資質不錯的她,總是被動的學習和產出師長期待的回
+                                答,唯有在談起她最愛的動漫時,她的眼中總會閃現光亮。<br>
+                                <br>
+                                為了讓孩子們探索職涯的可能性,家賢老師決定帶孩子進行職業採訪,孩子們列出的清單五
+                                花八門,從常見的律師、工程師,到少有人知的空中瑜珈教練等,而小琪選擇了一位專業的
+                                Coser,在過程中,她展現了少見的好奇與熱情,回到校園後,曾經沉默的小琪也自信地分
+                                享著採訪中的點滴,眼中充滿了熱情。<br>
+                                <br>
+                                期待透過這次經驗,這種對未來的探索熱情與挑戰精神,能持續引領著孩子們一步步找到人
+                                生的理想。<br>
+                                小琪下課時常靜靜地待在座位上,學習資質不錯的她,總是被動的學習和產出師長期待的回
+                                答,唯有在談起她最愛的動漫時,她的眼中總會閃現光亮。<br>
+                                <br>
+                                為了讓孩子們探索職涯的可能性,家賢老師決定帶孩子進行職業採訪,孩子們列出的清單五
+                                花八門,從常見的律師、工程師,到少有人知的空中瑜珈教練等,而小琪選擇了一位專業的
+                                Coser,在過程中,她展現了少見的好奇與熱情,回到校園後,曾經沉默的小琪也自信地分
+                                享著採訪中的點滴,眼中充滿了熱情。<br>
+                                <br>
+                                期待透過這次經驗,這種對未來的探索熱情與挑戰精神,能持續引領著孩子們一步步找到人
+                                生的理想。<br>
+                                <br>
+                                <br>
+                                花蓮富里鄉,第十届TFT計畫成員林家賢
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-panel" data-tab-content="3">3</div>
+                <div class="tab-panel" data-tab-content="4">4</div>
+                <div class="tab-panel" data-tab-content="5">5</div>
+                <div class="tab-panel" data-tab-content="6">6</div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="partners">
     <div class="partners-wrap">
         <div class="partners-tit">
@@ -91,9 +227,11 @@
 {% endblock %}
 
 {% block styles %}
+<link rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css">
 {% endblock %}
 
 {% block pluginScripts %}
+<script src="./assets/lib/swiper/swiper-bundle.min.js"></script>
 {% endblock %}
 
 {% block scripts %}

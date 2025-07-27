@@ -34,6 +34,46 @@
         e.preventDefault();
         $(this).closest('[data-collapse]').toggleClass('is-open').find('[data-collapse-content]').slideToggle();
     });
+
+    new Swiper('[data-slide="tab"]', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            // when window width is >= 768px
+            768: {
+                slidesPerView: 6,
+                spaceBetween: 10,
+            },
+            1281: {
+                slidesPerView: 6,
+                spaceBetween: 18,
+            }
+        },
+        on: {
+            slideChangeTransitionStart: function (swiper) {
+                const i = swiper.activeIndex + 1;
+                $('[data-tab-content], [data-tab-btn]').removeClass('-active');
+                $(`[data-tab-btn="${i}"], [data-tab-content="${i}"]`).addClass('-active');
+            },
+            resize: function (swiper) {
+                const i = $('[data-tab-btn].-active').data('tabBtn');
+                swiper.slideTo(i - 1);
+            },
+        },
+    });
+
+    // 頁籤
+    $('[data-tab-btn]').on('click.tab', function () {
+        $('[data-tab-content], [data-tab-btn]').removeClass('-active');
+        $(this).addClass('-active');
+        $(`[data-tab-content="${$(this).data('tabBtn')}"]`).addClass('-active');
+    });
+
+    $('[data-scrollbar]').overlayScrollbars({});
 })();
 
 (function boy() {
