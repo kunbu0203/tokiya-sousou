@@ -1,4 +1,139 @@
-.banner {}
+@keyframes scroll {
+    0% {
+        transform: translate(-50%, 0);
+    }
+
+    100% {
+        transform: translate(-50%, 30%);
+    }
+}
+
+.banner {
+    position: relative;
+    height: vwPc(1258);
+    background: url(./../image/banner/bg.png) no-repeat top left/100%;
+
+    &>div {
+        position: absolute;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-tit {
+        top: vwPc(80);
+        left: vwPc(230);
+        width: vwPc(856);
+    }
+
+    &-boy {
+        top: vwPc(200);
+        right: vwPc(50);
+        width: vwPc(1420);
+    }
+
+    &-talk {
+        top: vwPc(180);
+        right: vwPc(304);
+        width: vwPc(77);
+    }
+
+    &-book1 {
+        top: vwPc(510);
+        left: vwPc(140);
+        width: vwPc(160);
+    }
+
+    &-book2 {
+        top: vwPc(776);
+        left: vwPc(314);
+        width: vwPc(263);
+    }
+
+    &-book3 {
+        top: vwPc(70);
+        right: vwPc(20);
+        width: vwPc(248);
+    }
+
+    &-cloudl {
+        bottom: vwPc(37);
+        left: vwPc(226 - 371);
+        width: vwPc(371);
+    }
+
+    &-cloudr {
+        bottom: vwPc(-20);
+        right: 0;
+        width: vwPc(754);
+    }
+
+    & &-scroll {
+        position: fixed;
+        bottom: vwPc(30);
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: vwPc(148);
+        animation: scroll 1s ease-in-out infinite alternate;
+    }
+
+    @include breakpoint-down('mobile') {
+        height: vwMb(880 + 1106);
+        background-image: url(./../image/banner/bg-m.png);
+
+        &-tit {
+            top: vwMb(100);
+            left: 50%;
+            transform: translateX(-50%);
+            width: vwMb(893);
+        }
+
+        &-boy {
+            top: vwMb(880);
+            right: vwMb(-10);
+            width: vwMb(1734);
+        }
+
+        &-talk {
+            top: vwMb(880);
+            right: vwMb(810);
+            width: vwMb(103);
+        }
+
+        &-book1 {
+            top: vwMb(1110);
+            left: vwMb(-30);
+            width: vwMb(160);
+        }
+
+        &-book2 {
+            display: none;
+        }
+
+        &-book3 {
+            top: vwMb(773);
+            right: vwMb(-33);
+            width: vwMb(370);
+        }
+
+        &-cloudl {
+            bottom: vwMb(-880);
+            left: vwMb(-173);
+            width: vwMb(370);
+        }
+
+        &-cloudr {
+            bottom: vwMb(-180);
+            width: vwMb(866);
+        }
+
+        & &-scroll {
+            bottom: vwMb(60);
+            width: vwMb(266);
+        }
+    }
+}
 
 .boy {
     position: relative;

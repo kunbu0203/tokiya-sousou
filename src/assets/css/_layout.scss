@@ -12,10 +12,14 @@ body {
     }
 }
 
-
 .container {
     min-height: calc(var(--vh, 1vh) * 100);
+    background: url(./../image/bg.jpg) no-repeat center top/cover;
     overflow: hidden;
+
+    @include breakpoint-down('mobile') {
+        background-image: url(./../image/bg-m.jpg);
+    }
 }
 
 /* ------------------------------- Header ------------------------------- */

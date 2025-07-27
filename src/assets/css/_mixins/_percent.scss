@@ -10,7 +10,7 @@
     @return calc($item / $wrap) * 100vw;
 }
 
-@function vwMb($item, $wrap: 375) {
+@function vwMb($item, $wrap: 1125) {
     @return calc($item / $wrap) * 100vw;
 }
 

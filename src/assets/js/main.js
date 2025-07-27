@@ -21,13 +21,13 @@
     // goTop
     $(window).on('scroll.goTop', function () {
         $(window).scrollTop() > 30 ? $('.goTop').fadeIn(300) : $('.goTop').fadeOut(300);
-    });
+        $(window).scrollTop() < 30 ? $('.banner-scroll').fadeIn(300) : $('.banner-scroll').fadeOut(300);
+    }).trigger('scroll.goTop');
     $('[data-top]').on('click.goTop', function () {
         $('body, html').animate({
             scrollTop: 0
         }, 400)
     });
-    $(window).trigger('scroll.goTop');
 
     // 收合
     $('[data-collapse-action]').on('click', function (e) {
