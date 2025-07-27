@@ -35,6 +35,20 @@
         $(this).closest('[data-collapse]').toggleClass('is-open').find('[data-collapse-content]').slideToggle();
     });
 
+    new Swiper('[data-slide="product"]', {
+        loop: true,
+        slidesPerView: 1,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            enabled: true,
+            clickable: true
+        }
+    });
+
     new Swiper('[data-slide="tab"]', {
         slidesPerView: 1,
         spaceBetween: 10,

@@ -107,6 +107,298 @@
     }
 }
 
+.product {
+    padding-bottom: 140px;
+
+    &-wrap {
+        display: flex;
+        gap: 54px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &-pic {
+        position: relative;
+        flex: 0 0 auto;
+        width: 660px;
+        border-radius: 12px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+
+        .swiper {
+            & .swiper-pagination {
+                bottom: 26px;
+                font-size: 0;
+            }
+
+            & .swiper-pagination .swiper-pagination-bullet {
+                box-sizing: border-box;
+                width: 16px;
+                height: 16px;
+                margin: 0 10px;
+                border-radius: 50%;
+                border: 2px solid #9c6cb0;
+                background-color: #fff;
+                opacity: 1;
+                transition: background-color .3s;
+
+                &-active {
+                    background-color: #9c6cb0;
+                }
+            }
+
+            &-button-prev,
+            &-button-next {
+                top: 50%;
+                transform: translateY(-50%);
+                width: 50px;
+                height: 50px;
+                margin: 0;
+
+                &::after {
+                    content: none;
+                }
+            }
+
+            &-button-prev {
+                left: 28px;
+                background: url(./../image/product/prev.svg) no-repeat center/contain;
+            }
+
+            &-button-next {
+                right: 28px;
+                background: url(./../image/product/next.svg) no-repeat center/contain;
+            }
+        }
+    }
+
+    &-logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 290px;
+        z-index: 1;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-content {
+        flex: 0 0 auto;
+        width: 486px;
+    }
+
+    &-name {
+        margin-bottom: 32px;
+
+        img {
+            width: 617px;
+
+            &:nth-child(2) {
+                display: none;
+            }
+
+            @media only screen and (max-width: 1520px) {
+                width: 390px;
+                margin-top: -28px;
+
+                &:nth-child(1) {
+                    display: none;
+                }
+
+                &:nth-child(2) {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    &-txt {
+        p {
+            margin-top: 10px;
+            font-size: 24px;
+        }
+    }
+
+    &-btn {
+        display: inline-block;
+        margin-top: 90px;
+        font-size: 0;
+
+        img {
+            height: 66px;
+        }
+    }
+
+    &-sale {
+        margin-top: 70px;
+
+        img {
+            height: 36px;
+        }
+
+        ul {
+            margin-top: 18px;
+        }
+    }
+
+    &-note {
+        margin-top: 40px;
+        padding: 0 10px;
+        border-top: 1px solid #7a7a7a;
+        border-bottom: 1px solid #7a7a7a;
+
+        button {
+            position: relative;
+            width: 100%;
+            padding: 20px 0;
+            color: #7a7a7a;
+            text-align: left;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 24px;
+                right: 10px;
+                width: 20px;
+                height: 20px;
+                background: url(./../image/product/arrow.svg) no-repeat center/contain;
+                transition: transform .3s;
+            }
+        }
+
+        div {
+            display: none;
+            padding-bottom: 20px;
+            color: #7a7a7a;
+        }
+
+        &.is-open {
+            button {
+                &::after {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+    }
+
+    @include breakpoint-down('laptop') {
+        padding-bottom: 112px;
+
+        &-wrap {
+            max-width: 984px;
+            gap: 42px;
+        }
+
+        &-pic {
+            width: 528px;
+
+            .swiper {
+                & .swiper-pagination {
+                    bottom: 20px;
+                }
+
+                & .swiper-pagination .swiper-pagination-bullet {
+                    width: 13px;
+                    height: 13px;
+                    margin: 0 8px;
+                    border: 1px solid #9c6cb0;
+                }
+
+                &-button-prev,
+                &-button-next {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                &-button-prev {
+                    left: 22px;
+                }
+
+                &-button-next {
+                    right: 22px;
+                }
+            }
+        }
+
+        &-logo {
+            top: 16px;
+            left: 16px;
+            width: 232px;
+        }
+
+        &-content {
+            width: 414px;
+        }
+
+        &-name {
+            margin-bottom: 20px;
+
+            img {
+                width: 312px;
+                margin-top: -22px;
+            }
+        }
+
+        &-txt {
+            font-size: 15px;
+
+            p {
+                margin-top: 8px;
+                font-size: 20px;
+            }
+        }
+
+        &-btn {
+            margin-top: 60px;
+
+            img {
+                height: 52px;
+            }
+        }
+
+        &-sale {
+            margin-top: 50px;
+            font-size: 15px;
+
+            img {
+                height: 30px;
+            }
+
+            ul {
+                margin-top: 14px;
+            }
+        }
+
+        &-note {
+            margin-top: 20px;
+            padding: 0 8px;
+            font-size: 15px;
+
+            button {
+                padding: 16px 0;
+
+                &::after {
+                    top: 20px;
+                    right: 8px;
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+            div {
+                padding-bottom: 16px;
+            }
+        }
+    }
+
+    @include breakpoint-down('tablet') {}
+}
+
 .story {
     position: relative;
     padding: 0 20px 170px;
@@ -120,6 +412,7 @@
         width: 100%;
         height: 370px;
         background: url(./../image/story/cloud.png) no-repeat center top/cover;
+        pointer-events: none;
     }
 
     &-bg {

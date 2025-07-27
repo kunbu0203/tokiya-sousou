@@ -51,6 +51,71 @@
         <img src="./assets/image/intro/book.png" alt="">
     </div>
 </section>
+<section class="product">
+    <div class="product-wrap">
+        <div class="product-pic">
+            <div class="swiper" data-slide="product">
+                <div class="swiper-wrapper">
+                    {%- for i in range(0, 2) %}
+                    <div class="swiper-slide">
+                        <img src="./assets/image/product/pic-{{loop.index}}.jpg" alt="">
+                    </div>
+                    {%- endfor %}
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="product-logo">
+                <img src="./assets/image/product/logo.png" alt="">
+            </div>
+        </div>
+        <div class="product-content">
+            <div class="product-name">
+                <img class="-pc-pad" src="./assets/image/product/name.png" alt="">
+                <img class="-mb" src="./assets/image/product/name-m.png" alt="">
+            </div>
+            <div class="product-txt">
+                <ul>
+                    <li>陶板屋和風套餐買一送一感謝券1張</li>
+                    <li>2026聯名手帳1本(B6)</li>
+                    <li>SOU·SOU四季毯1件</li>
+                </ul>
+                <p>每組NT$399元</p>
+            </div>
+            <a href="#" class="product-btn">
+                <img src="./assets/image/product/btn.png" alt="">
+            </a>
+            <div class="product-sale">
+                <img src="./assets/image/product/books.png" alt="">
+                <ul>
+                    <li>扣除商品成本，收益全數捐贈TFT為台灣而教教育基金會公益使用</li>
+                    <li>限量26,000組，售完為止</li>
+                    <li>公益捐募許可字號：衛部救字第1141362211號</li>
+                </ul>
+            </div>
+            <div class="product-note" data-collapse>
+                <button data-collapse-action>感謝卡使用注意事項</button>
+                <div data-collapse-content>
+                    <ol>
+                        <li>使用期間為：2025/9/1-2025/12/12，優惠不得展延。</li>
+                        <li>限一至週五平日使用，週六、週日、國定假日及補假日恕不適用。(9/29補假日、10/6中秋節、10/10國慶日、10/24補假日不適用)</li>
+                        <li>本券不得與其他折扣行銷活動、優惠活動及同仁優惠等合併使用，亦不得使用於第三方平台消費等服務。</li>
+                        <li>購買『紙本禮券/商品卡/電子禮券(即享券)/商品』等非屬實際內用餐點的消費金額或套餐客數，不列入滿額（客）計算。</li>
+                        <li>結帳時欲使用『面額型電子禮券（即享券）』或『套餐型電子禮券（即享券）/紙本套餐商品禮券』折抵消費金額或套餐客數，亦不列入消費滿額（客）計算。</li>
+                        <li>使用本券後，發票金額可再使用瘋點數扣點。</li>
+                        <li>本券所兌換之商品或折抵消費之金額不予開立統一發票。</li>
+                        <li>本券無法兌換現金或找零，並請一次抵用完畢，不可重複或分次使用。</li>
+                        <li>本券一經使用恕無法更改或取消，亦無法退還；票券逾期恕無法使用、補（換）發。</li>
+                        <li>本券為有價證券，請勿擅自偽造、變造，以免觸犯刑責。</li>
+                        <li>本券請自行妥善保管，如遺失或遭他人盜用，恕不再補發。</li>
+                        <li>陶板屋保有隨時修改或終止本活動內容與最終解釋權。</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="story">
     <div class="story-bg">
         <img class="-pc-pad" src="./assets/image/story/bg.png" alt="">
@@ -87,8 +152,8 @@
                 <div class="tab-panel -active" data-tab-content="1">
                     <div class="story-item">
                         <div class="story-pic">
-                            <img class="-pc-pad" src="./assets/image/story/pic-1.jpg" alt="">
-                            <img class="-mb" src="./assets/image/story/pic-1-m.jpg" alt="">
+                            <img src="./assets/image/story/pic-1.jpg" alt="">
+                            <img src="./assets/image/story/pic-1-m.jpg" alt="">
                         </div>
                         <div class="story-content">
                             <div data-scrollbar>
