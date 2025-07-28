@@ -600,6 +600,14 @@
         img {
             height: 66px;
         }
+
+        @include breakpoint-up('laptop') {
+            transition: transform .3s;
+
+            &:hover {
+                transform: scale(0.95);
+            }
+        }
     }
 
     &-sale {
@@ -1220,6 +1228,12 @@
                         &.-active {
                             background-color: #fff;
                         }
+
+                        @include breakpoint-up('laptop') {
+                            &:hover {
+                                background-color: #fff;
+                            }
+                        }
                     }
                 }
             }
@@ -1278,13 +1292,37 @@
             }
 
             #{$root}-name {
-                padding-top: 8px;
+                padding-top: 12px;
+            }
+        }
+
+        @include breakpoint-up('laptop') {
+            &:hover {
+                background-color: #fff;
+
+                &::before {
+                    background-color: #fff;
+                }
+
+                &::after {
+                    width: 100px;
+                }
+
+                #{$root}-icon {
+                    transform: translateX(-50%) scale(1);
+                    opacity: 1;
+                }
+
+                #{$root}-name {
+                    padding-top: 12px;
+                }
             }
         }
     }
 
     &-name {
         flex: 0 0 auto;
+        font-size: 0;
         transition: padding .3s;
 
         img {
@@ -1346,7 +1384,7 @@
                 }
 
                 #{$root}-name {
-                    padding-top: 6px;
+                    padding-top: 10px;
                 }
             }
         }
@@ -1581,6 +1619,15 @@
             height: 16px;
             margin-top: 1px;
             background: url(./../image/partners/arrow.svg) no-repeat center/contain;
+            transition: transform .3s;
+        }
+
+        @include breakpoint-up('laptop') {
+            &:hover {
+                &::after {
+                    transform: translateX(100%);
+                }
+            }
         }
     }
 
