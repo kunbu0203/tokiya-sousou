@@ -58,6 +58,16 @@
         width: vwPc(856);
     }
 
+    &-note {
+        position: absolute;
+        top: vwPc(272);
+        left: vwPc(305);
+        font-size: vwPc(24.2);
+        font-weight: 300;
+        color: #f9cb57;
+        white-space: nowrap;
+    }
+
     &-boy {
         top: vwPc(200);
         right: vwPc(50);
@@ -124,6 +134,14 @@
             left: 50%;
             transform: translateX(-50%);
             width: vwMb(893);
+        }
+
+        &-note {
+            top: vwMb(530);
+            left: 0;
+            width: 100%;
+            font-size: vwMb(39);
+            text-align: center;
         }
 
         &-boy {
