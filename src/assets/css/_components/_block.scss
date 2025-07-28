@@ -1,3 +1,75 @@
+.preface {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    // background-color: #000;
+
+    &-txt {
+        display: flex;
+        flex-direction: column;
+        // gap: 99px;
+
+        img {
+            // height: 22px;
+        }
+    }
+
+    &-line {
+        width: 1px;
+        // height: 99px;
+        background-color: #fff;
+    }
+
+    &-cube {
+        // width: 10px;
+        // height: 10px;
+        background-color: #fff;
+        transform: rotate(45deg);
+    }
+
+    &-enter {
+        img {
+            // height: 20px;
+        }
+    }
+}
+
+.card {
+    &-wrap {
+        display: flex;
+        // gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &-item {
+        flex: 1;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    &-pic {
+        img {
+            width: 100%;
+        }
+    }
+
+    &-content {
+        // height: 99px;
+    }
+
+    &-tit {
+        // margin-bottom: 99px;
+        // font-size: 99px;
+        font-weight: 500;
+    }
+}
+
 .intro {
     position: relative;
     margin-bottom: 180px;
