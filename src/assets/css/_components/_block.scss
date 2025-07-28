@@ -1,3 +1,7 @@
+#act-header-full {
+    display: none;
+}
+
 .container .os-scrollbar .os-scrollbar-track {
     background-color: rgba(195, 195, 195, 0.3);
 
@@ -20,34 +24,118 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-    // background-color: #000;
+    background-color: rgba(41, 11, 101, 0.9);
+    z-index: 999;
+
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     &-txt {
         display: flex;
         flex-direction: column;
-        // gap: 99px;
+        gap: 45px;
 
         img {
-            // height: 22px;
+            height: 30px;
+            opacity: 0;
+            transform: translateY(50%);
         }
     }
 
     &-line {
         width: 1px;
-        // height: 99px;
-        background-color: #fff;
+        height: 170px;
+        margin-top: 45px;
+        opacity: 0;
+
+        &>div {
+            height: 170px;
+            background-color: #fff;
+        }
     }
 
     &-cube {
-        // width: 10px;
-        // height: 10px;
+        width: 10px;
+        height: 10px;
         background-color: #fff;
-        transform: rotate(45deg);
+        transform: scale(0.5);
+        opacity: 0;
     }
 
     &-enter {
+        margin-top: 36px;
+        transform: scale(0.5);
+        opacity: 0;
+
         img {
-            // height: 20px;
+            height: 22px;
+        }
+    }
+
+    @include breakpoint-down('laptop') {
+        &-txt {
+            gap: 36px;
+
+            img {
+                height: 24px;
+            }
+        }
+
+        &-line {
+            height: 136px;
+            margin-top: 36px;
+
+            &>div {
+                height: 136px;
+            }
+        }
+
+        &-cube {
+            width: 8px;
+            height: 8px;
+        }
+
+        &-enter {
+            margin-top: 28px;
+
+            img {
+                height: 18px;
+            }
+        }
+    }
+
+    @include breakpoint-down('tablet') {
+        &-txt {
+            gap: mb(66);
+
+            img {
+                height: mb(48);
+            }
+        }
+
+        &-line {
+            height: mb(285);
+            margin-top: mb(72);
+
+            &>div {
+                height: mb(285);
+            }
+        }
+
+        &-cube {
+            width: 6px;
+            height: 6px;
+        }
+
+        &-enter {
+            margin-top: 20px;
+
+            img {
+                height: mb(36);
+            }
         }
     }
 }

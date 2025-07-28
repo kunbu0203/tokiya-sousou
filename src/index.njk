@@ -1,20 +1,22 @@
 {% extends './_layouts/_layout.tmpl' %}
 
 {% block content %}
-{# <section class="preface">
+<section class="preface">
     <div class="preface-wrap">
         <div class="preface-txt">
             <img src="./assets/image/preface/txt-1.png" alt="">
             <img src="./assets/image/preface/txt-2.png" alt="">
             <img src="./assets/image/preface/txt-3.png" alt="">
         </div>
-        <div class="preface-line"></div>
+        <div class="preface-line">
+            <div></div>
+        </div>
         <div class="preface-cube"></div>
         <div class="preface-enter">
-            <img src="./assets/image/preface/enter.png" alt="">
+            <img src="./assets/image/preface/enter.svg" alt="">
         </div>
     </div>
-</section> #}
+</section>
 <section class="banner">
     <div class="banner-tit">
         <img class="-pc-pad" src="./assets/image/banner/tit.png" alt="">
@@ -415,6 +417,7 @@
 {% endblock %}
 
 {% block pluginScripts %}
+<script src="./assets/lib/gsap.min.js"></script>
 <script src="./assets/lib/swiper/swiper-bundle.min.js"></script>
 {% endblock %}
 

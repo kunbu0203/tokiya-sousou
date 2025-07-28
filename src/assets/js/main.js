@@ -13,6 +13,46 @@
         $('html').css('--vh', vh + 'px');
     }).trigger('resize.vh');
 
+    var tl = gsap.timeline();
+    tl.pause();
+    tl
+        .to('.preface-txt>img', {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            stagger: 1.2,
+        })
+        .to('.preface-line', {
+            opacity: 1,
+            duration: 0,
+        })
+        .from('.preface-line>div', {
+            height: 0,
+            duration: 1,
+            delay: 0.5,
+        })
+        .to('.preface-cube', {
+            opacity: 1,
+            scale: 1,
+            rotate: 135,
+            duration: 0.5,
+        }, '<')
+        .to('.preface-enter', {
+            opacity: 1,
+            scale: 1,
+            duration: 1,
+            ease: 'power1.out',
+            onComplete: () => {
+                setTimeout(() => {
+                    $('.preface').fadeOut(300);
+                    $('body').removeClass('-fixed');
+                }, 2500);
+            }
+        });
+    $(window).on('load', function () {
+        tl.play();
+    });
+
     // 選單
     $('[data-burger]').on('click.burger', function () {
         $('body').toggleClass('-menuOpen');
