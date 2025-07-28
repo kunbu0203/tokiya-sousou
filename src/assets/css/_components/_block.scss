@@ -173,6 +173,7 @@
             height: 150px;
             background: url(./../image/card/book.png) no-repeat center/contain;
             pointer-events: none;
+            animation: float 2s ease-in-out infinite alternate-reverse;
         }
     }
 
@@ -183,6 +184,8 @@
     }
 
     &-pic {
+        font-size: 0;
+
         img {
             width: 100%;
         }
@@ -324,6 +327,7 @@
 
     &-tit {
         margin-bottom: 90px;
+        font-size: 0;
 
         img {
             width: 460px;
@@ -338,6 +342,7 @@
 
     &-logo {
         margin-top: 80px;
+        font-size: 0;
 
         img {
             width: 426px;
@@ -349,6 +354,8 @@
         left: calc(50% + 260px);
         bottom: 10px;
         width: 192px;
+        font-size: 0;
+        animation: float 1.8s ease-in-out infinite alternate;
 
         img {
             width: 100%;
@@ -461,6 +468,7 @@
             width: 232px;
             height: 138px;
             background: url(./../image/product/book-l.png) no-repeat center/contain;
+            animation: float 1.8s ease-in-out infinite alternate;
         }
 
         &::after {
@@ -469,6 +477,7 @@
             width: 221px;
             height: 108px;
             background: url(./../image/product/book-r.png) no-repeat center/contain;
+            animation: float 1.5s ease-in-out infinite alternate-reverse;
         }
     }
 
@@ -477,6 +486,7 @@
         flex: 0 0 auto;
         width: 660px;
         border-radius: 12px;
+        font-size: 0;
         overflow: hidden;
 
         img {
@@ -550,6 +560,7 @@
 
     &-name {
         margin-bottom: 32px;
+        font-size: 0;
 
         img {
             width: 617px;
@@ -996,6 +1007,7 @@
     &-tit {
         margin-bottom: 40px;
         text-align: center;
+        font-size: 0;
 
         img {
             width: 356px;
@@ -1016,6 +1028,7 @@
     &-pic {
         flex: 0 0 auto;
         width: 400px;
+        font-size: 0;
         border-radius: 12px;
         overflow: hidden;
 
@@ -1489,6 +1502,7 @@
             height: 108px;
             background: url(./../image/partners/book-l.png) no-repeat center/contain;
             pointer-events: none;
+            animation: float 1.5s ease-in-out infinite alternate-reverse;
         }
 
         &::after {
@@ -1500,11 +1514,13 @@
             height: 138px;
             background: url(./../image/partners/book-r.png) no-repeat center/contain;
             pointer-events: none;
+            animation: float 1.8s ease-in-out infinite alternate-reverse;
         }
     }
 
     &-tit {
         margin-bottom: 58px;
+        font-size: 0;
 
         img {
             width: 303px;
@@ -1524,6 +1540,7 @@
     &-pic {
         flex: 1 1 auto;
         width: 540px;
+        font-size: 0;
         border-radius: 12px;
         overflow: hidden;
 
@@ -1538,6 +1555,8 @@
     }
 
     &-name {
+        font-size: 0;
+
         img {
             height: 46px;
         }
@@ -1708,6 +1727,7 @@
     &-tit {
         margin-bottom: 36px;
         text-align: center;
+        font-size: 0;
 
         img {
             width: 263px;

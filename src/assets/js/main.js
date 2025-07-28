@@ -53,6 +53,12 @@
         tl.play();
     });
 
+    // 進場
+    AOS.init({
+        duration: 800,
+        once: true
+    });
+
     // 選單
     $('[data-burger]').on('click.burger', function () {
         $('body').toggleClass('-menuOpen');

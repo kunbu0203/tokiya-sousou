@@ -8,6 +8,36 @@
     }
 }
 
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(30%);
+    }
+}
+
+@keyframes cloud {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(15%);
+    }
+}
+
+@keyframes cloudLg {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(5%);
+    }
+}
+
 .banner {
     position: relative;
     height: vwPc(1258);
@@ -15,6 +45,7 @@
 
     &>div {
         position: absolute;
+        font-size: 0;
 
         img {
             width: 100%;
@@ -43,30 +74,35 @@
         top: vwPc(510);
         left: vwPc(140);
         width: vwPc(160);
+        animation: float 1.8s ease-in-out infinite alternate;
     }
 
     &-book2 {
         top: vwPc(776);
         left: vwPc(314);
         width: vwPc(263);
+        animation: float 1.2s ease-in-out infinite alternate-reverse;
     }
 
     &-book3 {
         top: vwPc(70);
         right: vwPc(20);
         width: vwPc(248);
+        animation: float 1.8s ease-in-out infinite alternate-reverse;
     }
 
     &-cloudl {
         bottom: vwPc(37);
         left: vwPc(226 - 371);
         width: vwPc(371);
+        // animation: cloud 5s ease-in-out infinite alternate;
     }
 
     &-cloudr {
         bottom: vwPc(-20);
         right: 0;
         width: vwPc(754);
+        // animation: cloudLg 4s ease-in-out infinite alternate-reverse;
     }
 
     & &-scroll {
@@ -76,6 +112,7 @@
         transform: translate(-50%, 0);
         width: vwPc(148);
         animation: scroll 1s ease-in-out infinite alternate;
+        z-index: 50;
     }
 
     @include breakpoint-down('mobile') {
