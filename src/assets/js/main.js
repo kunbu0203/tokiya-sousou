@@ -64,6 +64,15 @@
         $('body').toggleClass('-menuOpen');
     });
 
+    // 錨點
+    $('[data-anchor-btn]').on('click.anchor', function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(`#${$(this).data('anchor-btn')}`).offset().top
+        }, 300);
+        $('body').removeClass('-menuOpen');
+    });
+
     // goTop
     $(window).on('scroll.goTop', function () {
         $(window).scrollTop() > 30 ? $('.goTop').fadeIn(300) : $('.goTop').fadeOut(300);

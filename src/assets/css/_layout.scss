@@ -195,6 +195,18 @@ body {
     }
 }
 
+.anchor {
+    transform: translateY(-120px);
+
+    @include breakpoint-down('laptop') {
+        transform: translateY(-100px);
+    }
+
+    @include breakpoint-down('tablet') {
+        transform: translateY(mb(-210));
+    }
+}
+
 /* ------------------------------- Footer ------------------------------- */
 .footer {
     padding: 24px 0;
