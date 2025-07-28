@@ -1,3 +1,16 @@
+.container .os-scrollbar .os-scrollbar-track {
+    background-color: rgba(195, 195, 195, 0.3);
+
+    .os-scrollbar-handle {
+        background-color: rgba(121, 121, 124, 0.4);
+        cursor: grab;
+
+        &:active {
+            cursor: grabbing;
+        }
+    }
+}
+
 .preface {
     position: fixed;
     top: 0;
@@ -40,11 +53,39 @@
 }
 
 .card {
+    position: relative;
+    padding: 0 20px 260px;
+    background: url(./../image/card/cloud.png) no-repeat center bottom/1920px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -64px;
+        left: calc(50% + 260px);
+        width: 455px;
+        height: 221px;
+        background: url(./../image/card/cloud-b.png) no-repeat center/contain;
+        pointer-events: none;
+    }
+
     &-wrap {
+        position: relative;
         display: flex;
-        // gap: 20px;
+        gap: 62px;
         max-width: 1200px;
         margin: 0 auto;
+        z-index: 1;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: calc(50% + 400px);
+            width: 246px;
+            height: 150px;
+            background: url(./../image/card/book.png) no-repeat center/contain;
+            pointer-events: none;
+        }
     }
 
     &-item {
@@ -60,13 +101,130 @@
     }
 
     &-content {
-        // height: 99px;
+        box-sizing: border-box;
+        height: 300px;
+        padding: 20px 10px 20px 24px;
+        background-color: #f1eeff;
+
+        &>div {
+            height: 100%;
+            padding-right: 14px;
+        }
     }
 
     &-tit {
-        // margin-bottom: 99px;
-        // font-size: 99px;
+        margin-bottom: 20px;
+        font-size: 24px;
         font-weight: 500;
+        color: #9c6cb0;
+    }
+
+    &-txt {
+        span {
+            color: #7a7a7a;
+        }
+    }
+
+    @include breakpoint-down('laptop') {
+        padding: 0 20px 180px;
+        background-size: 1280px;
+
+        &-wrap {
+            gap: 20px;
+            max-width: 984px;
+
+            &::after {
+                bottom: -80px;
+                left: calc(50% + 320px);
+                width: 197px;
+                height: 120px;
+            }
+        }
+
+        &-content {
+            height: 260px;
+            padding: 16px 6px 16px 20px;
+
+            &>div {
+                padding-right: 14px;
+            }
+        }
+
+        &-tit {
+            margin-bottom: 16px;
+            font-size: 21px;
+        }
+
+        &-txt {
+            font-size: 15px;
+        }
+    }
+
+    @include breakpoint-down('tablet') {
+        padding: 0 20px mb(225);
+        background-size: 1023px;
+
+        &::before {
+            top: -30px;
+            width: mb(455*1.5);
+            height: mb(221*1.5);
+        }
+
+        &-wrap {
+            gap: 16px;
+            max-width: 728px;
+
+            &::after {
+                bottom: -30px;
+                left: calc(50% + 280px);
+                width: mb(246);
+                height: mb(152);
+            }
+        }
+
+        &-content {
+            height: mb(690);
+            padding: 12px 4px 12px 12px;
+
+            &>div {
+                padding-right: 8px;
+            }
+        }
+
+        &-tit {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        &-txt {
+            font-size: 14px;
+        }
+    }
+
+    @include breakpoint-down('mobile') {
+        padding: 0 40px mb(225);
+        background-size: 768px;
+        background-image: url(./../image/card/cloud-m.png);
+
+        &::before {
+            display: none;
+        }
+
+        &-wrap {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+
+            &::after {
+                left: calc(50% + 76px);
+            }
+        }
+
+        &-item {
+            flex: 0 0 auto;
+            width: mb(861);
+            border-radius: 5px;
+        }
     }
 }
 
@@ -191,6 +349,7 @@
         width: 923px;
         height: 448px;
         background: url(./../image/product/cloud.png) no-repeat center/contain;
+        pointer-events: none;
     }
 
     &-wrap {
@@ -205,6 +364,7 @@
         &::after {
             content: '';
             position: absolute;
+            pointer-events: none;
         }
 
         &::before {
@@ -792,19 +952,6 @@
             font-weight: 500;
             color: #9c6cb0;
         }
-
-        .os-scrollbar .os-scrollbar-track {
-            background-color: rgba(195, 195, 195, 0.3);
-
-            .os-scrollbar-handle {
-                background-color: rgba(121, 121, 124, 0.3);
-                cursor: grab;
-
-                &:active {
-                    cursor: grabbing;
-                }
-            }
-        }
     }
 
     @include breakpoint-down('laptop') {
@@ -1253,6 +1400,7 @@
             width: 221px;
             height: 108px;
             background: url(./../image/partners/book-l.png) no-repeat center/contain;
+            pointer-events: none;
         }
 
         &::after {
@@ -1263,6 +1411,7 @@
             width: 230px;
             height: 138px;
             background: url(./../image/partners/book-r.png) no-repeat center/contain;
+            pointer-events: none;
         }
     }
 
