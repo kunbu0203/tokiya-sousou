@@ -1059,9 +1059,13 @@
         }
 
         p {
-            margin-bottom: 46px;
+            margin-bottom: 26px;
             font-size: 22px;
             font-weight: 500;
+            color: #9c6cb0;
+        }
+
+        span {
             color: #9c6cb0;
         }
     }
@@ -1114,7 +1118,7 @@
             }
 
             p {
-                margin-bottom: 36px;
+                margin-bottom: 18px;
                 font-size: 18px;
             }
         }
@@ -1167,8 +1171,8 @@
             }
 
             p {
-                margin-bottom: mb(78);
-                font-size: 16px;
+                margin-bottom: mb(60);
+                font-size: 17px;
             }
         }
     }
@@ -1505,7 +1509,7 @@
         }
 
         &-name {
-            padding: 0 0 0 26px;
+            padding: 0 0 0 50px;
 
             img {
                 height: mb(60);

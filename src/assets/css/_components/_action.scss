@@ -1,6 +1,26 @@
-.action {
-    display: flex;
-    justify-content: center;
+.link {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    color: #7c2090;
+    text-decoration: none;
 
-    @include breakpoint-down('mobile') {}
+    &::after {
+        content: '';
+        display: block;
+        flex: 0 0 auto;
+        width: 8px;
+        height: 16px;
+        margin-top: 1px;
+        background: url(./../image/partners/arrow.svg) no-repeat center/contain;
+        transition: transform .3s;
+    }
+
+    @include breakpoint-up('laptop') {
+        &:hover {
+            &::after {
+                transform: translateX(100%);
+            }
+        }
+    }
 }
