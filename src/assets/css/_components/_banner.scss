@@ -46,7 +46,7 @@
         position: absolute;
         top: vwPc(272);
         left: vwPc(305);
-        font-size: vwPc(24.2);
+        font-size: vwPc(23.2);
         font-weight: 300;
         color: #f9cb57;
         white-space: nowrap;
@@ -132,7 +132,7 @@
             top: vwMb(530);
             left: 0;
             width: 100%;
-            font-size: vwMb(39);
+            font-size: vwMb(37.3);
             text-align: center;
         }
 
@@ -165,9 +165,10 @@
         }
 
         &-cloudl {
-            top: calc(vwMb(1800) + 370px);
-            left: vwMb(-173);
-            width: vwMb(370);
+            display: none;
+            // top: calc(vwMb(1800) + 370px);
+            // left: vwMb(-173);
+            // width: vwMb(370);
         }
 
         &-cloudr {

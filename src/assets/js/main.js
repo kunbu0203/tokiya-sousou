@@ -59,14 +59,50 @@
             duration: 4,
         });
 
-    // var tlcr = gsap.timeline({
-    //     scrollTrigger: {
-    //         trigger: '.intro',
-    //         start: 'top 90%',
-    //         end: 'bottom 40%',
-    //         markers: true,
-    //     }
-    // });
+    var tlbc = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.intro-trigger',
+            start: 'top 90%',
+            end: 'top 50%',
+            scrub: 1,
+            // markers: true,
+        }
+    });
+    tlbc
+        .from('.banner-cloudl', {
+            x: '-100%'
+        })
+        .from('.banner-cloudr', {
+            x: '100%'
+        }, '<');
+
+    var tlic = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.intro-cloud',
+            start: 'top 90%',
+            end: 'top 60%',
+            scrub: 1,
+            // markers: true,
+        }
+    });
+    tlic
+        .from('.intro-cloud', {
+            x: '-53%'
+        });
+
+    var tlpc = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.product-cloud',
+            start: 'top 90%',
+            end: 'top 40%',
+            scrub: 1,
+            // markers: true,
+        }
+    });
+    tlpc
+        .from('.product-cloud', {
+            x: '-100%'
+        });
 
     // 進場
     AOS.init({
