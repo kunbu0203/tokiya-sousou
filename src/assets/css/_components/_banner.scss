@@ -1,10 +1,10 @@
 @keyframes scroll {
     0% {
-        transform: translate(-50%, 0);
+        transform: translate(-50%, -100%);
     }
 
     100% {
-        transform: translate(-50%, 30%);
+        transform: translate(-50%, -130%);
     }
 }
 
@@ -18,37 +18,21 @@
     }
 }
 
-@keyframes cloud {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(15%);
-    }
-}
-
-@keyframes cloudLg {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(5%);
-    }
-}
-
 .banner {
-    position: relative;
-    height: vwPc(1258);
-    background: url(./../image/banner/bg.png) no-repeat top left/100%;
+    padding-top: 100px;
 
-    &>div {
-        position: absolute;
-        font-size: 0;
+    &-wrap {
+        position: relative;
+        height: vwPc(1258*1.5);
+        background: url(./../image/banner/bg.png) no-repeat top left/100%;
 
-        img {
-            width: 100%;
+        &>div {
+            position: absolute;
+            font-size: 0;
+
+            img {
+                width: 100%;
+            }
         }
     }
 
@@ -102,32 +86,40 @@
     }
 
     &-cloudl {
-        bottom: vwPc(37);
+        top: vwPc(1050);
         left: vwPc(226 - 371);
         width: vwPc(371);
-        // animation: cloud 5s ease-in-out infinite alternate;
     }
 
     &-cloudr {
-        bottom: vwPc(-20);
+        top: vwPc(770);
         right: 0;
         width: vwPc(754);
-        // animation: cloudLg 4s ease-in-out infinite alternate-reverse;
     }
 
     & &-scroll {
         position: fixed;
-        bottom: vwPc(30);
+        top: calc(100vh - vwPc(30));
         left: 50%;
-        transform: translate(-50%, 0);
+        transform: translate(-50%, -100%);
         width: vwPc(148);
         animation: scroll 1s ease-in-out infinite alternate;
         z-index: 50;
     }
 
+    @include breakpoint-down('laptop') {
+        padding-top: 80px;
+    }
+
+    @include breakpoint-down('tablet') {
+        padding-top: mb(150);
+    }
+
     @include breakpoint-down('mobile') {
-        height: vwMb(880 + 1106);
-        background-image: url(./../image/banner/bg-m.png);
+        &-wrap {
+            height: vwMb(1986 * 2);
+            background-image: url(./../image/banner/bg-m.png);
+        }
 
         &-tit {
             top: vwMb(100);
@@ -173,18 +165,18 @@
         }
 
         &-cloudl {
-            bottom: -380px;
+            top: calc(vwMb(1800) + 370px);
             left: vwMb(-173);
             width: vwMb(370);
         }
 
         &-cloudr {
-            bottom: vwMb(-180);
+            top: vwMb(1600);
             width: vwMb(866);
         }
 
         & &-scroll {
-            bottom: vwMb(60);
+            top: calc(100vh - vwMb(60));
             width: vwMb(266);
         }
     }

@@ -26,6 +26,7 @@
     height: 100vh;
     background-color: rgba(41, 11, 101, 0.9);
     z-index: 999;
+    transform: translateY(100%);
 
     &-wrap {
         display: flex;
@@ -321,6 +322,7 @@
 
 .intro {
     position: relative;
+    margin-top: vwPc(1258 * -0.5);
     margin-bottom: 180px;
     padding: 0 20px;
     text-align: center;
@@ -396,6 +398,7 @@
 
     @include breakpoint-down('tablet') {
         padding-top: 20px;
+        margin-top: vwMb(-1986);
         margin-bottom: mb(250);
 
         &-tit {

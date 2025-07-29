@@ -5,10 +5,6 @@ body {
     min-height: calc(var(--vh, 1vh) * 100);
     overflow-x: hidden;
 
-    &.-fixed {
-        overflow: hidden;
-    }
-
     @include breakpoint-down('tablet') {
         &.-menuOpen {
             overflow: hidden;
@@ -183,17 +179,17 @@ body {
 }
 
 /* ------------------------------- Main ------------------------------- */
-.main {
-    padding-top: 100px;
+// .main {
+//     padding-top: 100px;
 
-    @include breakpoint-down('laptop') {
-        padding-top: 80px;
-    }
+//     @include breakpoint-down('laptop') {
+//         padding-top: 80px;
+//     }
 
-    @include breakpoint-down('tablet') {
-        padding-top: mb(150);
-    }
-}
+//     @include breakpoint-down('tablet') {
+//         padding-top: mb(150);
+//     }
+// }
 
 .anchor {
     transform: translateY(-120px);

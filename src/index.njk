@@ -1,6 +1,47 @@
 {% extends './_layouts/_layout.tmpl' %}
 
 {% block content %}
+<section class="banner">
+    <div class="banner-wrap">
+        <div class="banner-tit">
+            <img class="-pc-pad" src="./assets/image/banner/tit.png" alt="">
+            <img class="-mb" src="./assets/image/banner/tit-m.png" alt="">
+            <div class="banner-note">
+                扣除商品成本，收益全數捐給TFT為台而教公益使用
+            </div>
+        </div>
+        <div class="banner-boy">
+            <div class="boy">
+                <img src="./assets/image/boy/top.png" alt="">
+                <img src="./assets/image/boy/middle.png" alt="">
+                <img src="./assets/image/boy/bottom.png" alt="">
+            </div>
+        </div>
+        <div class="banner-talk">
+            <img class="-pc-pad" src="./assets/image/banner/talk.png" alt="">
+            <img class="-mb" src="./assets/image/banner/talk-m.png" alt="">
+        </div>
+        <div class="banner-book1">
+            <img src="./assets/image/banner/book-1.png" alt="">
+        </div>
+        <div class="banner-book2">
+            <img src="./assets/image/banner/book-2.png" alt="">
+        </div>
+        <div class="banner-book3">
+            <img src="./assets/image/banner/book-3.png" alt="">
+        </div>
+        <div class="banner-cloudl">
+            <img src="./assets/image/banner/cloud-l.png" alt="">
+        </div>
+        <div class="banner-cloudr">
+            <img src="./assets/image/banner/cloud-r.png" alt="">
+        </div>
+        <div class="banner-scroll">
+            <img class="-pc-pad" src="./assets/image/banner/scroll.png" alt="">
+            <img class="-mb" src="./assets/image/banner/scroll-m.png" alt="">
+        </div>
+    </div>
+</section>
 <section class="preface">
     <div class="preface-wrap">
         <div class="preface-txt">
@@ -15,45 +56,6 @@
         <div class="preface-enter">
             <img src="./assets/image/preface/enter.svg" alt="">
         </div>
-    </div>
-</section>
-<section class="banner">
-    <div class="banner-tit">
-        <img class="-pc-pad" src="./assets/image/banner/tit.png" alt="">
-        <img class="-mb" src="./assets/image/banner/tit-m.png" alt="">
-        <div class="banner-note">
-            扣除商品成本，收益全數捐給TFT為台而教公益使用
-        </div>
-    </div>
-    <div class="banner-boy">
-        <div class="boy">
-            <img src="./assets/image/boy/top.png" alt="">
-            <img src="./assets/image/boy/middle.png" alt="">
-            <img src="./assets/image/boy/bottom.png" alt="">
-        </div>
-    </div>
-    <div class="banner-talk">
-        <img class="-pc-pad" src="./assets/image/banner/talk.png" alt="">
-        <img class="-mb" src="./assets/image/banner/talk-m.png" alt="">
-    </div>
-    <div class="banner-book1">
-        <img src="./assets/image/banner/book-1.png" alt="">
-    </div>
-    <div class="banner-book2">
-        <img src="./assets/image/banner/book-2.png" alt="">
-    </div>
-    <div class="banner-book3">
-        <img src="./assets/image/banner/book-3.png" alt="">
-    </div>
-    <div class="banner-cloudl">
-        <img src="./assets/image/banner/cloud-l.png" alt="">
-    </div>
-    <div class="banner-cloudr">
-        <img src="./assets/image/banner/cloud-r.png" alt="">
-    </div>
-    <div class="banner-scroll">
-        <img class="-pc-pad" src="./assets/image/banner/scroll.png" alt="">
-        <img class="-mb" src="./assets/image/banner/scroll-m.png" alt="">
     </div>
 </section>
 <section class="intro" data-aos="fade-up">
@@ -468,7 +470,8 @@
 {% endblock %}
 
 {% block pluginScripts %}
-<script src="./assets/lib/gsap.min.js"></script>
+<script src="./assets/lib/gsap/gsap.min.js"></script>
+<script src="./assets/lib/gsap/ScrollTrigger.min.js"></script>
 <script src="./assets/lib/aos/aos.js"></script>
 <script src="./assets/lib/swiper/swiper-bundle.min.js"></script>
 {% endblock %}

@@ -13,9 +13,21 @@
         $('html').css('--vh', vh + 'px');
     }).trigger('resize.vh');
 
-    var tl = gsap.timeline();
-    tl.pause();
+    var tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.banner',
+            start: 'top top',
+            end: 'bottom top',
+            pin: true,
+            scrub: true,
+            // markers: true,
+        }
+    });
     tl
+        .to('.preface', {
+            y: 0,
+            duration: 4,
+        })
         .to('.preface-txt>img', {
             opacity: 1,
             y: 0,
@@ -28,30 +40,33 @@
         })
         .from('.preface-line>div', {
             height: 0,
-            duration: 1,
+            duration: 1.5,
             delay: 0.5,
         })
         .to('.preface-cube', {
             opacity: 1,
             scale: 1,
             rotate: 135,
-            duration: 0.5,
+            duration: 1.5,
         }, '<')
         .to('.preface-enter', {
             opacity: 1,
             scale: 1,
-            duration: 1,
-            ease: 'power1.out',
-            onComplete: () => {
-                setTimeout(() => {
-                    $('.preface').fadeOut(300);
-                    $('body').removeClass('-fixed');
-                }, 2500);
-            }
+            duration: 1
+        })
+        .to('.preface', {
+            y: '-100%',
+            duration: 4,
         });
-    $(window).on('load', function () {
-        tl.play();
-    });
+
+    // var tlcr = gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: '.intro',
+    //         start: 'top 90%',
+    //         end: 'bottom 40%',
+    //         markers: true,
+    //     }
+    // });
 
     // 進場
     AOS.init({
