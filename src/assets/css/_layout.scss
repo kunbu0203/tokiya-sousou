@@ -234,11 +234,13 @@ body {
     right: 20px;
     display: none;
     width: 190px;
+    font-size: 0;
     text-align: right;
     overflow: hidden;
     z-index: 50;
 
     &-txt {
+        display: inline-block;
         width: 47px;
         margin: 0 46px 12px 0;
 
@@ -248,7 +250,7 @@ body {
     }
 
     &-boy {
-        pointer-events: none;
+        // pointer-events: none;
     }
 
     @media only screen and (max-width: 1440px) {

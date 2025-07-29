@@ -91,10 +91,10 @@
         </footer>
     </div>
 
-    <div class="goTop">
-        <button class="goTop-txt" data-top>
+    <button class="goTop" data-top>
+        <div class="goTop-txt">
             <img src="{{ '/assets/image/top.svg' | relativePath }}" alt="">
-        </button>
+        </div>
         <div class="goTop-boy">
             <div class="boy">
                 <img src="{{ '/assets/image/boy/top-all.png' | relativePath }}" alt="">
@@ -102,7 +102,7 @@
                 <img src="{{ '/assets/image/boy/bottom-all.png' | relativePath }}" alt="">
             </div>
         </div>
-    </div>
+    </button>
     {% block popups %}{% endblock %}
     <script src="{{ '/assets/lib/jquery-3.7.1.min.js' | relativePath }}"></script>
     <script src="{{ '/assets/lib/overlayScrollbars/jquery.overlayScrollbars.min.js' | relativePath }}"></script>
