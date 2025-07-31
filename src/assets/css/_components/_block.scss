@@ -325,9 +325,9 @@
 
 .intro {
     position: relative;
-    margin-top: vwPc(1258 * -0.5);
+    margin-top: calc(100vh - vwPc(1258 * 1.5) - 100px);
     margin-bottom: 180px;
-    padding: 0 20px;
+    padding: calc(vwPc(1258 * 1.5) - 100vh + 100px) 20px 0;
     text-align: center;
 
     &-trigger {
@@ -336,6 +336,10 @@
         left: 0;
         width: 100%;
         height: 100%;
+    }
+
+    &-wrap {
+        margin-top: vwPc(1258 * -0.5);
     }
 
     &-cloud {

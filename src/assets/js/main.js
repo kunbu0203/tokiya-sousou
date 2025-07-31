@@ -53,11 +53,19 @@
             opacity: 1,
             scale: 1,
             duration: 1
-        })
-        .to('.preface', {
-            y: '-100%',
-            duration: 4,
         });
+    var tlut = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.intro',
+            start: 'top bottom',
+            end: 'bottom bottom',
+            scrub: true,
+            markers: true
+        }
+    });
+    tlut.to('.preface', {
+        y: '-100%',
+    });
 
     var tlbc = gsap.timeline({
         scrollTrigger: {
