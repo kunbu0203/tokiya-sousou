@@ -24,31 +24,37 @@
         }
     });
     tl
-        .to('.preface-txt', {
+        .to('.preface-wrap > div', {
             opacity: 1,
             y: 0,
             duration: 1,
-        })
-        .to('.preface-line', {
-            opacity: 1,
-            duration: 0,
-        })
-        .from('.preface-line>div', {
-            height: 0,
-            duration: 1.5,
-            delay: 0.5,
-        })
-        .to('.preface-cube', {
-            opacity: 1,
-            scale: 1,
-            rotate: 135,
-            duration: 1.5,
-        }, '<')
-        .to('.preface-enter', {
-            opacity: 1,
-            scale: 1,
-            duration: 1
         });
+    // tl
+    //     .to('.preface-txt', {
+    //         opacity: 1,
+    //         y: 0,
+    //         duration: 1,
+    //     })
+    //     .to('.preface-line', {
+    //         opacity: 1,
+    //         duration: 0,
+    //     })
+    //     .from('.preface-line>div', {
+    //         height: 0,
+    //         duration: 1.5,
+    //         delay: 0.5,
+    //     })
+    //     .to('.preface-cube', {
+    //         opacity: 1,
+    //         scale: 1,
+    //         rotate: 135,
+    //         duration: 1.5,
+    //     }, '<')
+    //     .to('.preface-enter', {
+    //         opacity: 1,
+    //         scale: 1,
+    //         duration: 1
+    //     });
 
     var tlut = gsap.timeline({
         scrollTrigger: {
@@ -118,6 +124,20 @@
             x: '-100%'
         });
 
+    var tlcc = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.card-cloud',
+            start: 'top 90%',
+            end: 'top 60%',
+            scrub: 1,
+            // markers: true,
+        }
+    });
+    tlcc
+        .from('.card-cloud', {
+            x: '120%'
+        });
+
     // 進場
     AOS.init({
         duration: 800,
@@ -139,6 +159,9 @@
     });
 
     // goTop
+    $(window).on('scroll.goTop', function () {
+        $(window).scrollTop() < 30 ? $('.banner-scroll').fadeIn(300) : $('.banner-scroll').fadeOut(300);
+    }).trigger('scroll.goTop');
     $('[data-top]').on('click.goTop', function () {
         $('body, html').animate({
             scrollTop: 0

@@ -2,6 +2,10 @@
     display: none;
 }
 
+img[referrerpolicy="unsafe-url"] {
+    display: none;
+}
+
 .container .os-scrollbar .os-scrollbar-track {
     background-color: rgba(195, 195, 195, 0.3);
 
@@ -37,6 +41,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            opacity: 0;
+            transform: translateY(10%);
         }
     }
 
@@ -44,8 +50,8 @@
         display: flex;
         flex-direction: column;
         gap: 45px;
-        opacity: 0;
-        transform: translateY(10%);
+        // opacity: 0;
+        // transform: translateY(10%);
 
         img {
             height: 30px;
@@ -56,7 +62,7 @@
         width: 1px;
         height: 170px;
         margin-top: 45px;
-        opacity: 0;
+        // opacity: 0;
 
         &>div {
             height: 170px;
@@ -68,14 +74,15 @@
         width: 10px;
         height: 10px;
         background-color: #fff;
-        transform: scale(0.5);
-        opacity: 0;
+        transform: rotate(45deg);
+        // transform: scale(0.5);
+        // opacity: 0;
     }
 
     &-enter {
         margin-top: 36px;
-        transform: scale(0.5);
-        opacity: 0;
+        // transform: scale(0.5);
+        // opacity: 0;
 
         img {
             height: 22px;
@@ -155,8 +162,7 @@
     background-position: center bottom;
     background-size: 1920px;
 
-    &::before {
-        content: '';
+    &-cloud {
         position: absolute;
         top: -64px;
         left: calc(50% + 260px);
@@ -265,7 +271,7 @@
         padding: 0 20px mb(225);
         background-size: 1023px;
 
-        &::before {
+        &-cloud {
             top: -30px;
             width: mb(455*1.5);
             height: mb(221*1.5);
@@ -307,7 +313,7 @@
         background-size: 768px;
         background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.1)), url(./../image/card/cloud-m.png);
 
-        &::before {
+        &-cloud {
             display: none;
         }
 
@@ -1552,6 +1558,7 @@
 }
 
 .partners {
+    position: relative;
     padding: 170px 20px 50px;
     background-color: #faf6f1;
 
@@ -1792,6 +1799,7 @@
 }
 
 .qa {
+    position: relative;
     padding: 322px 20px 110px;
     background: #faf6f1 url(./../image/qa/mountain.png) repeat-x top center/1920px;
 
