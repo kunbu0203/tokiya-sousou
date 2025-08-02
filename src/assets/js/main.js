@@ -15,7 +15,7 @@
 
     var tl = gsap.timeline({
         scrollTrigger: {
-            trigger: '.banner',
+            trigger: '.preface-wrap',
             start: 'top top',
             end: 'bottom top',
             pin: true,
@@ -24,15 +24,10 @@
         }
     });
     tl
-        .to('.preface', {
-            y: 0,
-            duration: 4,
-        })
-        .to('.preface-txt>img', {
+        .to('.preface-txt', {
             opacity: 1,
             y: 0,
             duration: 1,
-            stagger: 1.2,
         })
         .to('.preface-line', {
             opacity: 1,
@@ -54,24 +49,26 @@
             scale: 1,
             duration: 1
         });
+
     var tlut = gsap.timeline({
         scrollTrigger: {
             trigger: '.intro',
             start: 'top bottom',
-            end: 'bottom bottom',
+            end: 'top top',
             scrub: true,
-            markers: true
+            // markers: true
         }
     });
-    tlut.to('.preface', {
-        y: '-100%',
+    tlut.to('.banner', {
+        y: '-65%',
+        ease: 'none',
     });
 
     var tlbc = gsap.timeline({
         scrollTrigger: {
-            trigger: '.intro-trigger',
-            start: 'top 90%',
-            end: 'top 50%',
+            trigger: '.intro',
+            start: 'top bottom',
+            end: 'top 70%',
             scrub: 1,
             // markers: true,
         }
@@ -79,10 +76,7 @@
     tlbc
         .from('.banner-cloudl', {
             x: '-100%'
-        })
-        .from('.banner-cloudr', {
-            x: '100%'
-        }, '<');
+        });
 
     var tlic = gsap.timeline({
         scrollTrigger: {

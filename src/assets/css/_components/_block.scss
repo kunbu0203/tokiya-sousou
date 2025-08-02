@@ -16,33 +16,39 @@
 }
 
 .preface {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    box-sizing: border-box;
     width: 100vw;
-    height: 100vh;
-    background-color: rgba(41, 11, 101, 0.9);
+    height: 200vh;
+    margin-bottom: 100vh;
+    padding-top: 100vh;
     z-index: 999;
-    transform: translateY(100%);
+    pointer-events: none;
 
     &-wrap {
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
+        height: 100vh;
+        background-color: rgba(41, 11, 101, 0.9);
+        pointer-events: visible;
+
+        &>div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &-txt {
         display: flex;
         flex-direction: column;
         gap: 45px;
+        opacity: 0;
+        transform: translateY(10%);
 
         img {
             height: 30px;
-            opacity: 0;
-            transform: translateY(50%);
         }
     }
 
@@ -325,22 +331,9 @@
 
 .intro {
     position: relative;
-    margin-top: calc(100vh - vwPc(1258 * 1.5) - 100px);
     margin-bottom: 180px;
-    padding: calc(vwPc(1258 * 1.5) - 100vh + 100px) 20px 0;
+    padding-top: 150px;
     text-align: center;
-
-    &-trigger {
-        position: absolute;
-        top: -300px;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    &-wrap {
-        margin-top: vwPc(1258 * -0.5);
-    }
 
     &-cloud {
         display: none;
@@ -385,10 +378,7 @@
 
     @include breakpoint-down('laptop') {
         margin-bottom: 144px;
-
-        &-trigger {
-            top: -240px;
-        }
+        padding-top: 120px;
 
         &-tit {
             margin-bottom: 70px;
@@ -420,8 +410,7 @@
     }
 
     @include breakpoint-down('tablet') {
-        padding-top: 20px;
-        margin-bottom: mb(250);
+        padding-top: 100px;
 
         &-tit {
             margin-bottom: mb(60);
@@ -454,12 +443,6 @@
 
     @include breakpoint-down('mobile') {
         position: relative;
-        margin-top: vwMb(-1986);
-        padding-top: 100px;
-
-        &-trigger {
-            top: -200px;
-        }
 
         &-cloud {
             display: block;
