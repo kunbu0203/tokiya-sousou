@@ -231,12 +231,13 @@ body {
     position: fixed;
     bottom: 40px;
     right: 20px;
-    display: none;
     width: 190px;
     font-size: 0;
     text-align: right;
     overflow: hidden;
     z-index: 50;
+    opacity: 0;
+    pointer-events: none;
 
     &-txt {
         display: inline-block;

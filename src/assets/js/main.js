@@ -61,7 +61,19 @@
     });
     tlut.to('.banner', {
         y: '-65%',
-        ease: 'none',
+        ease: 'none'
+    });
+
+    gsap.to('.goTop', {
+        opacity: 1,
+        pointerEvents: 'visible',
+        scrollTrigger: {
+            trigger: '.intro',
+            start: '35% bottom',
+            end: '35%',
+            // markers: true,
+            toggleActions: 'play none none reverse',
+        }
     });
 
     var tlbc = gsap.timeline({
@@ -127,10 +139,6 @@
     });
 
     // goTop
-    $(window).on('scroll.goTop', function () {
-        $(window).scrollTop() > 30 ? $('.goTop').fadeIn(300) : $('.goTop').fadeOut(300);
-        $(window).scrollTop() < 30 ? $('.banner-scroll').fadeIn(300) : $('.banner-scroll').fadeOut(300);
-    }).trigger('scroll.goTop');
     $('[data-top]').on('click.goTop', function () {
         $('body, html').animate({
             scrollTop: 0
