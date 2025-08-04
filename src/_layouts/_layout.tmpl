@@ -23,7 +23,7 @@
     <meta property="og:image:height" content="628"> #}
 
     <link rel="manifest" href="{{ '/site.json' | relativePath }}" crossorigin="use-credentials">
-    <link rel="shortcut icon" href="{{ '/favicon.ico' | relativePath }}" />
+    <link rel="shortcut icon" href="{{ '/assets/image/touch/logo.png' | relativePath }}" />
     <link rel="apple-touch-icon" href="{{ '/assets/image/touch/logo.png' | relativePath }}">
 
     {% block pluginsStyles %}{% endblock %}
@@ -43,9 +43,9 @@
     <div class="container">
         <header class="header">
             <div class="header-wrap">
-                <a href="#" class="header-logo" target="_blank" rel="noopener noreferrer">
+                <div class="header-logo">
                     <img src="{{ '/assets/image/header/logo.png' | relativePath }}" alt="">
-                </a>
+                </div>
                 <button class="header-burger" data-burger></button>
                 <div class="header-pcNav">
                     <button class="header-item" data-anchor-btn="product">

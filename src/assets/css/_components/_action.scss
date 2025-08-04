@@ -5,13 +5,17 @@
     color: #7c2090;
     text-decoration: none;
 
+    &>span {
+        color: #7c2090;
+    }
+
     &::after {
         content: '';
         display: block;
         flex: 0 0 auto;
         width: 8px;
         height: 16px;
-        margin-top: 1px;
+        margin-top: 0.15em;
         background: url(./../image/partners/arrow.svg) no-repeat center/contain;
         transition: transform .3s;
     }

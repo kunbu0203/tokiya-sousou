@@ -594,13 +594,17 @@ body {
   text-decoration: none;
 }
 
+.link > span {
+  color: #7c2090;
+}
+
 .link::after {
   content: "";
   display: block;
   flex: 0 0 auto;
   width: 8px;
   height: 16px;
-  margin-top: 1px;
+  margin-top: 0.15em;
   background: url(../image/partners/arrow.svg) no-repeat center/contain;
   transition: transform 0.3s;
 }
@@ -833,7 +837,7 @@ img[referrerpolicy=unsafe-url] {
   color: #9c6cb0;
 }
 
-.card-txt span {
+.card-txt > span {
   color: #7a7a7a;
 }
 
@@ -1699,14 +1703,14 @@ img[referrerpolicy=unsafe-url] {
   overflow-y: auto;
 }
 
-.story-content p {
+.story-content > div > p {
   margin-bottom: 26px;
   font-size: 22px;
   font-weight: 500;
   color: #9c6cb0;
 }
 
-.story-content span {
+.story-content > div > span {
   color: #9c6cb0;
 }
 
@@ -1760,7 +1764,7 @@ img[referrerpolicy=unsafe-url] {
     padding-right: 32px;
   }
 
-  .story-content p {
+  .story-content > div > p {
     margin-bottom: 18px;
     font-size: 18px;
   }
@@ -1815,7 +1819,7 @@ img[referrerpolicy=unsafe-url] {
     padding-right: 20px;
   }
 
-  .story-content p {
+  .story-content > div > p {
     margin-bottom: 20px;
     font-size: 17px;
   }
