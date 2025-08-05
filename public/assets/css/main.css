@@ -1034,7 +1034,8 @@ img[referrerpolicy=unsafe-url] {
 
 @media only screen and (max-width: 1023px) {
   .intro {
-    padding-top: 100px;
+    margin-bottom: 100px;
+    padding-top: 60px;
   }
 
   .intro-tit {

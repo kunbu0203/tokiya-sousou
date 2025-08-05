@@ -416,7 +416,8 @@ img[referrerpolicy="unsafe-url"] {
     }
 
     @include breakpoint-down('tablet') {
-        padding-top: 100px;
+        margin-bottom: 100px;
+        padding-top: 60px;
 
         &-tit {
             margin-bottom: mb(60);
