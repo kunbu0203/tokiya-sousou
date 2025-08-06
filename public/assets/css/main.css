@@ -156,11 +156,11 @@ body {
 
 .header-logo {
   flex: 0 0 auto;
-  width: 426px;
+  display: flex;
 }
 
 .header-logo img {
-  width: 100%;
+  height: 49px;
 }
 
 .header-item {
@@ -195,8 +195,8 @@ body {
     height: 80px;
   }
 
-  .header-logo {
-    width: 340px;
+  .header-logo img {
+    height: 39px;
   }
 
   .header-pcNav {
@@ -213,8 +213,8 @@ body {
     height: 50px;
   }
 
-  .header-logo {
-    width: 195px;
+  .header-logo img {
+    height: 22px;
   }
 
   .header-pcNav {
@@ -795,7 +795,7 @@ img[referrerpolicy=unsafe-url] {
 .card-wrap::after {
   content: "";
   position: absolute;
-  bottom: -100px;
+  bottom: -110px;
   left: calc(50% + 400px);
   width: 246px;
   height: 150px;
@@ -853,7 +853,7 @@ img[referrerpolicy=unsafe-url] {
   }
 
   .card-wrap::after {
-    bottom: -80px;
+    bottom: -90px;
     left: calc(50% + 320px);
     width: 197px;
     height: 120px;
@@ -896,7 +896,7 @@ img[referrerpolicy=unsafe-url] {
   }
 
   .card-wrap::after {
-    bottom: -30px;
+    bottom: -35px;
     left: calc(50% + 280px);
     width: 82px;
     height: 50.6666666667px;

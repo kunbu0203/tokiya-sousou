@@ -183,7 +183,7 @@ img[referrerpolicy="unsafe-url"] {
         &::after {
             content: '';
             position: absolute;
-            bottom: -100px;
+            bottom: -110px;
             left: calc(50% + 400px);
             width: 246px;
             height: 150px;
@@ -241,7 +241,7 @@ img[referrerpolicy="unsafe-url"] {
             max-width: 984px;
 
             &::after {
-                bottom: -80px;
+                bottom: -90px;
                 left: calc(50% + 320px);
                 width: 197px;
                 height: 120px;
@@ -282,7 +282,7 @@ img[referrerpolicy="unsafe-url"] {
             max-width: 728px;
 
             &::after {
-                bottom: -30px;
+                bottom: -35px;
                 left: calc(50% + 280px);
                 width: mb(246);
                 height: mb(152);
