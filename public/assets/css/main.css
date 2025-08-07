@@ -135,7 +135,7 @@ body {
 
 .header {
   position: fixed;
-  top: 0;
+  top: 49px;
   left: 0;
   box-sizing: border-box;
   width: 100%;
@@ -397,7 +397,7 @@ body {
 
 .banner {
   position: fixed;
-  top: 0;
+  top: 49px;
   left: 0;
   width: 100%;
   padding-top: 100px;
@@ -616,7 +616,11 @@ body {
 }
 
 #act-header-full {
-  display: none;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 
 img[referrerpolicy=unsafe-url] {
